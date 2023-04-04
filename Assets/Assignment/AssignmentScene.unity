@@ -1228,7 +1228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e61546bea7f2a74795ab29cfc5f9657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _apiKey: 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
+  _apiKey: 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
   _model: 0
   _maxTokens: 3072
   _temperature: 0.6
@@ -1245,9 +1245,10 @@ MonoBehaviour:
     your
     output JSON format {reply_to_player, text_color, background_color}
 
-    for text_color
-    and background_color, the return strings are hex codes for a color with the #
-    symbol. These two colors should have a strong contrast.'
+
+    for
+    text_color and background_color, the return strings are hex codes for a color
+    with the # symbol. These two colors should be colorful and have a strong contrast.'
   chatGPTResponse:
     m_PersistentCalls:
       m_Calls:

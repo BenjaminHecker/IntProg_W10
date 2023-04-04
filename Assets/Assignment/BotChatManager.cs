@@ -66,7 +66,11 @@ public class BotChatManager : MonoBehaviour
             }
 
             BotJsonReceiver botJSON = JsonUtility.FromJson<BotJsonReceiver>(message);
-            talkLine = botJSON.reply_to_player.Replace("\\\\", "\\");
+            talkLine = "<color=" + botJSON.text_color + ">" + botJSON.reply_to_player.Replace("\\\\", "\\") + "</color>";
+
+            Color backgroundColor;
+            if (ColorUtility.TryParseHtmlString(botJSON.background_color, out backgroundColor))
+                Camera.main.backgroundColor = backgroundColor;
 
             Debug.Log("text_color: " + botJSON.text_color + ", background_color: " + botJSON.background_color);
 
